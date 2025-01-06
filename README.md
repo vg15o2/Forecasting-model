@@ -1,4 +1,5 @@
 **This is a project that aimed to develop a forecasting model using neural networks **
+
 Objective and Data Analysis:
 The project focuses on predicting and analyzing air pollutants (e.g., PM2.5, NO, NO2, NOx, SO2, Ozone, Benzene, etc.) in Shadipur, Delhi, across different phases of the COVID-19 lockdown. Techniques like Fourier transforms and seasonal decomposition were used to preprocess data, handle missing values, and analyze seasonal patterns.
 
