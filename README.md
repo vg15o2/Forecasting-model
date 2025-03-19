@@ -1,10 +1,18 @@
 # Forecasting Air Pollutants Using Neural Networks  
 
+## Table of Contents
+- [Objective and Data Analysis](#objective-and-data-analysis)
+- [Preprocessing and Data Handling](#preprocessing-and-data-handling)
+- [Model Development and Evaluation](#model-development-and-evaluation)
+- [Validation and Uncertainty Analysis](#validation-and-uncertainty-analysis)
+- [Impact of COVID-19 Lockdown on Air Quality](#impact-of-covid-19-lockdown-on-air-quality)
+- [Insights and Applications](#insights-and-applications)
+- [Conclusion](#conclusion)
+
 ## Objective and Data Analysis  
-Air pollution remains a critical environmental and public health issue, particularly in metropolitan areas like **Delhi**. This project aims to develop a robust **neural network-based forecasting model** to predict air pollutant concentrations with high accuracy.  
+Air pollution remains a critical environmental and public health issue, particularly in metropolitan areas like **Delhi**. This project aims to develop a robust **neural network-based forecasting model** for air pollutants.
 
 The study focuses on air quality in **Shadipur, Delhi**, across different phases of the **COVID-19 lockdown**, analyzing pollutants such as:  
-
 - **PM2.5 (Particulate Matter)**  
 - **NO (Nitric Oxide)**  
 - **NO₂ (Nitrogen Dioxide)**  
@@ -16,16 +24,14 @@ The study focuses on air quality in **Shadipur, Delhi**, across different phases
 - **m/p-Xylene**  
 - **Toluene (C₆H₅CH₃)**  
 
-### Preprocessing and Data Handling  
+## Preprocessing and Data Handling  
 To ensure high-quality input for the model, multiple data processing techniques were implemented:  
-
 - **Time-Series Decomposition**: Seasonal-trend decomposition using **Fourier Transforms (FFT)** and **Seasonal-Trend decomposition using LOESS (STL)** to extract periodic patterns.  
 - **Missing Data Handling**: **Linear interpolation** and **KNN imputation** to maintain dataset consistency.  
 - **Exploratory Data Analysis (EDA)**: Correlation heatmaps, rolling statistics, and trend analysis to study seasonal variations and relationships among pollutants.  
 
 ## Model Development and Evaluation  
 Given the complex nature of air pollution trends, various **machine learning (ML) and artificial intelligence (AI) models** were explored. The models developed and tested include:  
-
 - **Multi-Layer Perceptron (MLP)** – Standard feedforward neural network.  
 - **Backpropagation Neural Network (BPNN)** – Optimized for error correction through gradient descent.  
 - **Radial Basis Function Neural Network (RBFNN)** – Effective for pattern recognition in non-linear time-series data.  
@@ -34,26 +40,20 @@ Given the complex nature of air pollution trends, various **machine learning (ML
 
 ### Model Evaluation Metrics  
 To assess the models' performance, standard time-series regression metrics were used:  
-
 - **Root Mean Square Error (RMSE)** – Measures the model’s predictive accuracy.  
 - **Mean Squared Error (MSE)** – Penalizes larger deviations in predictions.  
 - **Mean Absolute Error (MAE)** – Evaluates absolute deviations from true values.  
 - **R² Score (Coefficient of Determination)** – Represents the variance explained by the model.  
 - **Taylor Diagrams** – Used for graphical performance comparison of models.  
 
-### Key Findings  
-The **Wavelet Neural Network (WNN)** emerged as the best-performing model, outperforming others in capturing pollutant variations due to its **multi-resolution analysis capability**. It effectively handled **short-term fluctuations and long-term trends**, making it the most reliable forecasting tool for this problem.  
-
 ## Validation and Uncertainty Analysis  
 To ensure robustness, the following validation techniques were applied:  
-
 - **Temporal Cross-Validation**: Splitting the dataset into multiple time-based folds to optimize generalization across unseen data.  
 - **Sensitivity Analysis**: Evaluating the effect of different hyperparameters and data configurations on model performance.  
 - **Monte Carlo Simulations**: Running multiple simulations to quantify prediction uncertainties and establish confidence intervals.  
 
 ## Impact of COVID-19 Lockdown on Air Quality  
 The project also investigated the influence of lockdown policies on air pollution levels by dividing 2020 into five phases:  
-
 1. **Pre-lockdown (January – March 2020)** – Baseline pollution levels before restrictions.  
 2. **Strict Lockdown (March – May 2020)** – Significant reduction in emissions due to halted transportation and industrial activity.  
 3. **Relaxed Lockdown (June – August 2020)** – Partial reopening, leading to a gradual rise in pollutants.  
@@ -83,6 +83,21 @@ The results from this study have direct implications in:
 - **Urban Planning** – Using pollution forecasts to guide city planning for sustainability.  
 
 ## Conclusion  
-This project successfully leveraged **deep learning and wavelet-based neural networks** to forecast air pollutant concentrations in **Delhi** with high accuracy. The study not only demonstrated the **superiority of WNNs** in time-series forecasting but also provided critical insights into how **policy changes can significantly impact air quality**.  
+This project successfully leveraged **deep learning and wavelet-based neural networks** to forecast air pollutant concentrations in **Delhi** with high accuracy. The study not only demonstrated the efficacy of advanced AI models but also provided valuable insights into the impact of COVID-19 lockdown measures on air quality.
 
 The findings serve as a **foundation for future research in predictive environmental analytics**, contributing to global efforts in combating air pollution.  
+
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vg15o2/Forecasting-model.git
+    ```
+2. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+To run the forecasting model, use the following command:
+```bash
+python forecast.py --input data/air_quality.csv --model wnn
